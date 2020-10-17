@@ -1,0 +1,16 @@
+<app-app-bar></app-app-bar>
+<div class="container main p-4">
+  <mat-card class="main">
+    <div *ngIf="user">
+      <h1>{{ user.name }}</h1>
+      <p><b>Joining Date :</b> {{ user.joining | date }}</p>
+      <p><b>Education</b> :{{ user.education }}</p>
+      <p><b>Hobbies</b>: <span class="hobby" *ngFor="let hobby of user.hobbies">{{ hobby }}</span></p>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="openEditDialog()" type="submit">
+        Edit
+      </button>
+    </div>
+  </mat-card>
+</div>

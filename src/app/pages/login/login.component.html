@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row main">
+    <div class="side-wrapper d-flex align-items-center justify-content-center col-12 col-md-6">
+      <h1>Employee Board</h1>
+    </div>
+
+    <!-- form -->
+
+    <div class="Employe-board d-flex flex-column align-items-center justify-content-center col-12 col-md-6">
+      <form (submit)="handleLogin()" [formGroup]="loginFormGroup" class="d-flex flex-column">
+        <h1>Login</h1>
+        <mat-form-field class="mb-2">
+          <mat-label>userName</mat-label>
+          <input matInput formControlName="userName" name="userName" placeholder="Enter User Name" />
+          <mat-error>
+            <app-show-form-error [control]="loginFormGroup.get('userName')" label="User Name"></app-show-form-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mb-2">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" name="passwordcode"
+            placeholder="Enter Password" />
+            <mat-error>
+              <app-show-form-error [control]="loginFormGroup.get('password')" label="password"></app-show-form-error>
+            </mat-error>
+        </mat-form-field>
+        <button mat-raised-button  color="primary" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

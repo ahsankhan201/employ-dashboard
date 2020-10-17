@@ -1,0 +1,15 @@
+form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+mat-form-field{
+    width: 50%;
+    padding: 10px 15px;
+}
+.form-button{
+    margin-top: 5%;
+}
+.form-button button{
+    margin: 5px;
+}

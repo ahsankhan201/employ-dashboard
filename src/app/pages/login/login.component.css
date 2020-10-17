@@ -1,0 +1,22 @@
+.main{
+    height: 100vh ;
+}
+.side-wrapper{
+    background: #673ab7;
+}
+.side-wrapper h1{
+    font-size: 45px;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Employe-board form{
+    width: 80%;
+}
+
+.Employe-board form h1{
+    text-align: center;
+    color: #673ab7;
+    font-size: 22px;
+    font-weight: 700;
+    opacity: .6;
+}

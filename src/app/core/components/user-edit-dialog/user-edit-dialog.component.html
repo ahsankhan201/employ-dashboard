@@ -1,0 +1,80 @@
+<ng-container *ngIf="!deleteMode">
+<h1 mat-dialog-title>User Edit</h1>
+<form [formGroup]="userFormGroup" class="edit-form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" name="name" placeholder="Enter  Name" />
+    <mat-error>
+      <app-show-form-error [control]="userFormGroup.get('name')" label="Name"></app-show-form-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Joining Date</mat-label>
+    <input matInput formControlName="joining" name="joining" [matDatepicker]="picker" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error>
+      <app-show-form-error [control]="userFormGroup.get('joining')" label="Joining Date"></app-show-form-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Education</mat-label>
+    <input matInput formControlName="education" name="education" placeholder="Enter  Education" />
+    <mat-error>
+      <app-show-form-error [control]="userFormGroup.get('education')" label="Education"></app-show-form-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" name="username" placeholder="Enter Username" [readonly]="!isAdmin" />
+    <mat-error>
+      <app-show-form-error [control]="userFormGroup.get('username')" label="Username"></app-show-form-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="isAdmin">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput formControlName="password" name="password" placeholder="Enter Password" />
+    <mat-error>
+      <app-show-form-error [control]="userFormGroup.get('password')" label="Password"></app-show-form-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList *ngIf="userData">
+      <mat-chip *ngFor="let hobby of userData.hobbies" [selectable]="false" [removable]="true"
+        (removed)="removeHobby(hobby)">
+        {{ hobby }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Add hobbies" formControlName="hobbies" [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+        (matChipInputTokenEnd)="addHobby($event)" />
+    </mat-chip-list>
+  </mat-form-field>
+  <div class="d-flex w-100 justify-content-end align-items-end form-button">
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">
+      Cancel
+    </button>
+    <button mat-raised-button color="success" (click)="sendUser()" [disabled]="userFormGroup.invalid">
+      {{ editMode ? "Update" : "Save" }}
+    </button>
+  </div>
+</form>
+</ng-container>
+
+<ng-container *ngIf="data.deleteMode">
+  <h1 mat-dialog-title>User Delete</h1>
+  <p>Are you sure want to delete this user?</p>
+  <div class="d-flex w-100 justify-content-end align-items-end form-button">
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">
+      Cancel
+    </button>
+    <button mat-raised-button color="success" (click)="sendUser()">
+     Delete
+    </button>
+  </div>
+</ng-container>

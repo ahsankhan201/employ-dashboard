@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "role": 0,
+      "name": "Admin",
+      "joining": "2020-10-14T12:11:16.216Z",
+      "education": "MSC",
+      "hobbies": [
+        "Reading",
+        "singing"
+      ],
+      "id": "042a4fc5-b2ff-49cf-a746-c39cc69099eb",
+      "username": "admin",
+      "password": "1234"
+    },
+    {
+      "role": 1,
+      "name": " Ahsan Hameed khan",
+      "joining": "2020-10-28T20:00:00.000Z",
+      "education": "Masters (MCS)",
+      "hobbies": [
+        "Singing",
+        "Dancing",
+        "Coding"
+      ],
+      "id": "f9b67508-0171-4df9-82cc-1ee9f2d3f226",
+      "username": "user"
+    },
+    {
+      "role": 1,
+      "name": "Abdul Basit Khan",
+      "joining": "2020-10-17T02:14:45.568Z",
+      "education": "MBBS",
+      "hobbies": [
+        "Walking",
+        "bathing",
+        "Reading"
+      ],
+      "id": "2.9040f19b0a0fb.be88a69ef8165.ca5c79c92176a.7869c81974587.7f3b519a12770.fd569bf405a.a105ba46d7629.c358c73e1d94-1.5a75247053d4c.b467c85a9ccfa.16556ff082ef4.bd4d443ef96-4b.773ccbb847699.26dcedd9550b9.53e096040335-37.eaabb6c93ddb3.b45883064349e.8b87d5aaed9f-c.d520e3d5f2521.27a366f20af9a.f03a4e057e648.375da7c182cc9.fd117674effcc.78553b64321bc.175df32436ff0.08fe00cfedf84.ae78b163ba9ae.4e04b5d100ac4.25b53d8b98958.83ed25d0b332",
+      "username": "basit",
+      "password": "1234"
+    },
+    {
+      "role": 1,
+      "name": "new user",
+      "joining": "2020-10-17T09:54:18.435Z",
+      "education": "B-Tech",
+      "hobbies": [
+        "Coding"
+      ],
+      "id": "1.fbc9942f72c9d.9fab604313a87.9c7057f029250.bf6c95796545a.c2003bc23ed12.6834f02abac50.fa6f90a0be1da.4a03d1b0b3f-7.c1d97ae360c28.8f550a0912ca6.a97d13cfed8c4.4065d4cc95bf-49.e705b61c38091.970c1860d5566.f9eb3d13cd56-36.73e3f4688fe7a.7b64ad6d904b9.7a79eae5f16a-c.78823ef33df74.1592c22ed728c.436d285cf3c63.95289787a6ab4.0c58f7b435474.15262718ab15a.a9fe75610158.4d964de292863.76944325fa171.8ae5b563c44d8.81fd14fb1b390.871db318032a",
+      "username": "user",
+      "password": "1234"
+    }
+  ]
+}

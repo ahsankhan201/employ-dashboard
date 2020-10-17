@@ -1,0 +1,49 @@
+<div>
+  <app-app-bar></app-app-bar>
+  <div class="d-flex justify-content-between p-3">
+    <h1 class="users-heading">Users</h1>
+    <button mat-fab color="primary" (click)="addUser()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <table mat-table [dataSource]="users" *ngIf="users.length > 0">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="joining">
+      <th mat-header-cell *matHeaderCellDef>Joining</th>
+      <td mat-cell *matCellDef="let user">{{ user.joining | date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="education">
+      <th mat-header-cell *matHeaderCellDef>Education</th>
+      <td mat-cell *matCellDef="let user">{{ user.education }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="hobbies">
+      <th mat-header-cell *matHeaderCellDef>Hobbies</th>
+      <td mat-cell *matCellDef="let user">
+        <span class="hobby" *ngFor="let hobby of user.hobbies">{{ hobby }}</span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef>Edit</th>
+      <td mat-cell *matCellDef="let user">
+        <mat-icon (click)="editUser(user)">edit</mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef>Delete</th>
+      <td mat-cell *matCellDef="let user">
+        <mat-icon (click)="deleteUser(user.id)">delete</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hobby-card {
+  margin: 15px 0px;
+  min-width: 6%;
+  min-height: 8%;
+  display: inline-block;
+}
+.hobby {
+  background-color: #e0e0e0;
+  margin: 3px;
+  padding: 6px 8px;
+  border-radius: 16px;
+}
